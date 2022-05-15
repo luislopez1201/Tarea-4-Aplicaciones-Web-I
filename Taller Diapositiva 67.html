@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deber Arrays</title>
+</head>
+<body>
+    <center><h1>Botón para ver los Meses del Año</h1></center>
+    <p> <center><input type="button" value="Mostrar Meses" onclick="MostrarMeses();"></center></p><br>
+    <center><h1>Productos Disponibles</h1></center>
+    <p> <center><input type="button" value="Mostrar Productos" onclick="imprimeDatos();"></center></p><br>
+    <script>
+    function MostrarMeses(){
+        var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto",
+        "Septiembre","Octubre","Noviembre","Diciembre"];
+        for(var i=0; i < meses.length; i++){
+            alert(meses[i]);
+        }
+    } 
+    function Producto_alimenticio(Code,Nombre,Valor){
+        this.Code=Code;
+        this.Nombre=Nombre;
+        this.Valor=Valor;
+    }
+
+    var producto1 = new Producto_alimenticio(001," Zanahoria " ," $ 0.25 ");
+    var producto2 = new Producto_alimenticio(002," Cafe "," $ 7.50 ");
+    var producto3 = new Producto_alimenticio(003," Yogurth "," $ 2.50 ");
+        
+    function imprimeDatos(){
+    var array = [producto1,producto2,producto3];
+    for (contar = 0; contar < array.length; contar++){
+        document.write("Codigo: "+array[contar].Code+" | ");
+        document.write("Nombre: "+array[contar].Nombre+" | ");
+        document.write("Precio: "+array[contar].Valor+"<br>");
+        }
+    }
+    </script>
+</body>
+</html>

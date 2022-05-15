@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <br><p></p>
+            <center><h3>Funcion para transformar un Número de Octal a Decimal</h3></center>
+            <td> Ingrese el número con base Octal : <input type="number" name="x" id="x" ></td> 
+        </tr>
+    </table>
+    <p> <center><input type="button" value="MOSTRAR NUMERO DECIMAL" onclick="SolicitarNumeros();"></center></p><br>
+    <table>
+        <tr>
+            <br><p></p>
+            <center><h3>Ingrese los números a Calcular</h3></center>
+            <td> Ingrese el primer numero : <input type="number" name="a" id="a" ></td>
+            <td> Ingrese el segundo numero: <input type="number" name="b" id="b" ></td>   
+        </tr>
+    </table>
+    <p> <center><input type="button" value="CALCULAR SUMA" onclick="calcularSuma();"></center></p><br>
+    <p> <center><input type="button" value="CALCULAR RESTA" onclick="calcularResta();"></center></p><br>
+    <p> <center><input type="button" value="CALCULAR MULTIPLICACION" onclick="calcularMultiplicacion();"></center></p><br>
+    <p> <center><input type="button" value="CALCULAR DIVISION" onclick="calcularDivision();"></center></p><br>
+    <script>
+        function SolicitarNumeros() {
+            const octal =  parseInt(document.getElementById("x"). value);
+            alert( "El número decimal es " + parseInt(octal, 8));
+            System.out.println;
+        }
+        function calcularSuma() {
+        var num1 = parseInt(document.getElementById("a"). value);
+        var num2 = parseInt(document.getElementById("b"). value);
+        var suma = (num1+num2);
+        alert("La suma es: "+suma);
+        }
+        function calcularResta() {
+        var num1 = parseInt(document.getElementById("a"). value);
+        var num2 = parseInt(document.getElementById("b"). value);
+        var resta = (num1-num2);
+        alert("La resta es: "+resta);
+        }
+        function calcularMultiplicacion() {
+        var num1 = parseInt(document.getElementById("a"). value);
+        var num2 = parseInt(document.getElementById("b"). value);
+        var multiplicacion = (num1*num2);
+        alert("La multiplicacion es: "+multiplicacion);
+        }
+        function calcularDivision() {
+        var num1 = parseInt(document.getElementById("a"). value);
+        var num2 = parseInt(document.getElementById("b"). value);
+        var division = (num1/num2);
+        alert("La division es: "+division);
+        }
+    </script>
+</body>
+</html
